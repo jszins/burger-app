@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classes from './BurgerIngredient.css';
 
-class BurgerIngredient extends Component = (props) => {
+class BurgerIngredient extends Component {
   render() {
     let ingredient = null;
 
@@ -33,6 +33,7 @@ class BurgerIngredient extends Component = (props) => {
       default:
         ingredient = null;
     }
+    return ingredient;
   }
 }
 
