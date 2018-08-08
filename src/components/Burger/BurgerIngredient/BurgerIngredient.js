@@ -32,4 +32,4 @@ const burgerIngredient = (props) => {
   }
 }
 
-export default burgerIngredient
+export default burgerIngredient;
