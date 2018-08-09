@@ -11,17 +11,18 @@ class Layout extends Component {
     showSideDrawer: true
   }
 
-  sideDrawerClosedHandler = () => {
-    this.setState({showSideDrawer: false})
-  };
+  sideDrawerToggleHandler = () => {
+    let toggle = this.state.showSideDrawer
+    this.setState({showSideDrawer: !toggle})
+  }
 
   render () {
     return (
       <Aux>
-        <Toolbar />
+        <Toolbar toggleSideDrawer={this.sideDrawerToggleHandler} />
         <SideDrawer
           open={this.state.showSideDrawer}
-          closed={this.sideDrawerClosedHandler} />
+          closed={this.sideDrawerToggleHandler} />
         <main className={classes.Content}>
           {this.props.children}
         </main>
