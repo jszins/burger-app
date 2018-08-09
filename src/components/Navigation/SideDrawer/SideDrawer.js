@@ -8,7 +8,7 @@ import classes from './SideDrawer.css'
 const sideDrawer = (props) => {
   return (
     <Aux>
-      <Backdrop show/>
+      <Backdrop show={props.open} backdrop={props.closed}/>
       <div className={classes.SideDrawer}>
         <Logo height="11%"/>
         <nav>
